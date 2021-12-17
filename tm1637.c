@@ -80,6 +80,12 @@ void tm1637_set_brightness(tm1637__7seg_t *_7seg, uint8_t level)
 	_7seg->brightness = (level > 7 ? 7 : level);
 }
 
+void tm1637_turnoff(tm1637__7seg_t *_7seg){
+	for(uint8_t i=0;i<4;i++){
+		tm1637_set_seg_raw(_7seg,i,0x00);
+	}
+}
+
 void tm1637_set_seg_value(tm1637__7seg_t *_7seg, const uint8_t seg_num, const uint8_t value, const bool dot)
 {
 	uint8_t data = 0x00;
