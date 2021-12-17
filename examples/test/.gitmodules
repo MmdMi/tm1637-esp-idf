@@ -1,0 +1,3 @@
+[submodule "components/tm1637"]
+	path = components/tm1637
+	url = git@github.com:MmdMi/tm1637-esp-idf.git

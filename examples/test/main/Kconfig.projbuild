@@ -1,0 +1,17 @@
+menu "Tm1637 Config"
+    
+    config TM1637_CLK
+        int "CLK Pin"
+        range 0 39
+        default 23
+        help 
+            Set CLK pin
+
+    config TM1637_DIO
+        int "DIO Pin"
+        range 0 39
+        default 22
+        help
+            Set DIO pin
+
+endmenu
